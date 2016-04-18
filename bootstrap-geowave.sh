@@ -34,27 +34,27 @@ IMAGEIO_URL=http://data.opengeo.org/suite/jai/jai_imageio-1_1-lib-linux-amd64-jd
 
 # Step #1: I've externalized commands into library functions for clarity, download and source
 if [ ! -f /tmp/geowave-install-lib.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/geowave-install-lib.sh /tmp/geowave-install-lib.sh
+	aws s3 cp s3://geowave/emr/4/derek/geowave-install-lib.sh /tmp/geowave-install-lib.sh
 fi
 source /tmp/geowave-install-lib.sh
 if [ ! -f /tmp/geowave-env.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/geowave-env.sh /tmp/geowave-env.sh
+	aws s3 cp s3://geowave/emr/4/derek/geowave-env.sh /tmp/geowave-env.sh
 fi
 source /tmp/geowave-env.sh
 if [ ! -f /tmp/geoserver-geowave-workspace.tar ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/geoserver-geowave-workspace.tar  /tmp/geoserver-geowave-workspace.tar 
+	aws s3 cp s3://geowave/emr/4/derek/geoserver-geowave-workspace.tar  /tmp/geoserver-geowave-workspace.tar 
 fi
 if [ ! -f /tmp/setup-geoserver-geowave-workspace.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/setup-geoserver-geowave-workspace.sh /tmp/setup-geoserver-geowave-workspace.sh
+	aws s3 cp s3://geowave/emr/4/derek/setup-geoserver-geowave-workspace.sh /tmp/setup-geoserver-geowave-workspace.sh
 fi
 if [ ! -f /tmp/ingest-gdelt.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/ingest-gdelt.sh /tmp/ingest-gdelt.sh
+	aws s3 cp s3://geowave/emr/4/derek/ingest-gdelt.sh /tmp/ingest-gdelt.sh
 fi
 if [ ! -f /tmp/setup-geowave.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/setup-geowave.sh /tmp/setup-geowave.sh
+	aws s3 cp s3://geowave/emr/4/derek/setup-geowave.sh /tmp/setup-geowave.sh
 fi
 if [ ! -f /tmp/setup-accumulo-geowave.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/setup-accumulo-geowave.sh /tmp/setup-accumulo-geowave.sh
+	aws s3 cp s3://geowave/emr/4/derek/setup-accumulo-geowave.sh /tmp/setup-accumulo-geowave.sh
 fi
 # Step #2: The EMR customize hooks run _before_ everything else, so Hadoop is not yet ready
 THIS_SCRIPT="$(realpath "${BASH_SOURCE[0]}")"
