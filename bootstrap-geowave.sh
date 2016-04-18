@@ -47,8 +47,8 @@ fi
 if [ ! -f /tmp/setup-geoserver-geowave-workspace.sh ]; then
 	aws s3 cp s3://geowave/emr/4/gdelt-example/setup-geoserver-geowave-workspace.sh /tmp/setup-geoserver-geowave-workspace.sh
 fi
-if [ ! -f /tmp/ingest-and-kde-gdelt.sh ]; then
-	aws s3 cp s3://geowave/emr/4/gdelt-example/ingest-and-kde-gdelt.sh /tmp/ingest-and-kde-gdelt.sh
+if [ ! -f /tmp/ingest-gdelt.sh ]; then
+	aws s3 cp s3://geowave/emr/4/gdelt-example/ingest-gdelt.sh /tmp/ingest-gdelt.sh
 fi
 if [ ! -f /tmp/setup-geowave.sh ]; then
 	aws s3 cp s3://geowave/emr/4/gdelt-example/setup-geowave.sh /tmp/setup-geowave.sh
