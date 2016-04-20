@@ -1,15 +1,10 @@
 #!/bin/bash
 export STAGING_DIR=/tmp
 export INSTANCE=accumulo
-#PARIS 11/13/2015-11/14/2015
-#export TIME_REGEX=2015111[34]
-#export EAST=2.63791
-#export WEST=2.08679
-#export NORTH=49.04694
-#export SOUTH=48.658291
 
-#Europe 02/2016
-export TIME_REGEX=201[3456]
+# GDELT data from 1/1/2016 - 3/31/2016
+# 18,152,148 total events
+export TIME_REGEX=20160[123][0123][0123456789]
 export EAST=180
 export WEST=-180
 export NORTH=90

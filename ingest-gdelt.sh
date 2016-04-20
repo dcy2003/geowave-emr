@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Ingesting GeoWave sample data and running kernel density estimate..."
+echo "Ingesting GeoWave sample data ..."
 source geowave-env.sh
 
 mkdir $STAGING_DIR/gdelt;cd $STAGING_DIR/gdelt
